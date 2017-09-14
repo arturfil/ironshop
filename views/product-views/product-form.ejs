@@ -1,0 +1,31 @@
+<h2> Add a New Product</h2>
+
+<!-- check to see if we have error messages to display -->
+<% if (typeof errorMessages !== 'undefined') { %>
+  <ul class='error'>
+    <% for (let fieldName in errorMessages) { %>
+      <li> <%= errorMessages[fieldName].message %> </li>
+    <% } %>
+  </ul>
+<% } %>
+
+<form action="/products" method="post">
+
+  <label for="product-name-input"> Product Name </label>
+  <input id="product-name-input" name="productName" type="text">
+  <br>
+
+  <label for="price-input"> Price </label>
+  <input id="price-input" type="text" name="productPrice" value="">
+  <br>
+
+  <label for="image-input"> Image URL </label>
+  <input id="image-input" type="text" name="productImageUrl" value="">
+  <br>
+
+  <label for="description-input"> Description </label>
+  <textarea id="description-input" name="productDescription" rows="6" cols="40"></textarea>
+  <br>
+
+  <button> Save Product </button>
+</form>

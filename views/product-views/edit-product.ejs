@@ -1,0 +1,23 @@
+<h2> Edit Product </h2>
+
+<form action="/products/<%= productInfo._id%>" method="post">
+
+  <label for="product-name-input"> Product Name </label>
+  <input id="product-name-input" name="productName" type="text" value="<%= productInfo.name %>">
+  <br>
+
+  <label for="price-input"> Price </label>
+  <input id="price-input" type="text" name="productPrice" value="<%= productInfo.price %>">
+  <br>
+
+  <label for="image-input"> Image URL </label>
+  <input id="image-input" type="text" name="productImageUrl" value="<%= productInfo.imageUrl %>">
+  <br>
+
+  <label for="description-input"> Description </label>
+  <textarea id="description-input" name="productDescription" rows="6" cols="40"><%= productInfo.description %></textarea>
+  <!-- prepopulate text, not the same as the other input fields.  -->
+  <br>
+
+  <button> Update Product </button>
+</form>

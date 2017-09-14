@@ -1,0 +1,33 @@
+<h2> Review Product: </h2>
+
+<h3> <%= productInfo.name %> </h3>
+<img src="<%= productInfo.imageUrl %>" alt="">
+
+<% if (typeof errorMessages !== 'undefined') { %>
+  <ul class='error'>
+    <% for (let fieldName in errorMessages) { %>
+      <li> <%= errorMessages[fieldName].message %> </li>
+    <% } %>
+  </ul>
+<% } %>
+
+<form class="" action="/products/<%=productInfo._id%>/reviews" method="post">
+
+
+  <label for="author-input">Author</label>
+  <br>
+  <input id="author-input"type="text" name="reviewAuthor" value="" placeholder="example@123.com">
+  <br>
+
+  <label for="start-input">Stars</label>
+  <br>
+  <input id="start-input"type="text" name="reviewStars" value="" placeholder="from 1 to 5">
+  <br>
+  <br>
+  <label for="content-input">Comments</label>
+  <br>
+  <textarea id="content-input" name="reviewContent" rows="8" cols="80" placeholder="Your comments..."></textarea>
+  <br>
+  <br>
+  <button> Submit Review</button>
+</form>

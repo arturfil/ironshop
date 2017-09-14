@@ -1,0 +1,26 @@
+<h2> Search for Products </h2>
+
+<form class="" action="/products/search-results" method="get">
+  <label for="search-input"> Search Again </label>
+  <input id="search-input" type="search" name="searchTerm" placeholder="Pizza" value="<%= lastSearch %> ">
+
+
+
+  <button> Search </button>
+</form>
+
+<p>You searched for <strong> <%= lastSearch %> results.</strong></p>
+<p> <%= listOfResults.length %> </p>
+
+<ul>
+  <% listOfResults.forEach((oneProduct) => { %>
+    <li>
+      <h3> <%= oneProduct.name %> </h3>
+      <p> Price: <%= oneProduct.price %> </p>
+
+      <a href="/products/<%= oneProduct._id %>">
+        See More Details
+      </a>
+    </li>
+<%  }) %>
+</ul>

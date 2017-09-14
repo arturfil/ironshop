@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.error {
+  border: 3px solid crimson;
+  border-radius: 3px;
+  color: crimson;
+  padding: 15px 20px;
+  list-style: none;
+}

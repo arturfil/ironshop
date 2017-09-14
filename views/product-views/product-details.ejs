@@ -1,0 +1,23 @@
+<h2> Product Details </h2>
+
+<h3> <%= productInfo.name %> </h3>
+<img src="<%= productInfo.imageUrl %>" >
+<p>Price: $<%= productInfo.price %> </p>
+<p>Description: <%= productInfo.description %> </p>
+<br>
+
+<a href="/products/<%= productInfo._id %>/reviews/new">
+  Review This Product
+</a>
+
+<h3> Reviews </h3>
+
+<ul>
+  <% productInfo.reviews.forEach((oneReview) => { %>
+    <li>
+      <span>  <%= '⭐️'.repeat(oneReview.stars) %> </span>
+      <p> <%= oneReview.content %> </p>
+      <p> <%= oneReview.author %> </p>
+    </li>
+  <% }) %>
+</ul>

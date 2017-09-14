@@ -1,0 +1,10 @@
+<h2> Luxury Products </h2>
+
+<ol>
+  <% listOfProducts.forEach((oneProduct) => { %>
+    <li>
+      <h3> <%= oneProduct.name %></h3>
+      <p> Price: <%= oneProduct.price %> </p>
+    </li>
+<%  }) %>
+</ol>
