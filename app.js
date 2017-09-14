@@ -7,9 +7,11 @@ const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 
+require('dotenv').config();
+
 
 //when deploying, this url will have to change
-mongoose.connect('mongodb://localhost/ironshop');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
