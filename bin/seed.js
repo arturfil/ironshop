@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const ProductModel = require('../models/products-model.js');
 
 mongoose.connect('mongodb://localhost/ironshop');
